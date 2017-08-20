@@ -6,24 +6,45 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articleone = {
-    title: 'Article One | Virroy',
-    heading: 'Article One',
-    date: '19 August, 2017',
-    content: `
-                <p>
-                        This is my content for my first article. This is my content for my first article. This is my content for my first article. This is my content for my first article. This is my content for my first article. This is my content for my first article.
-                </p>
-                 <p>
-                        This is my content for my first article. This is my content for my first article. This is my content for my first article. This is my content for my first article. This is my content for my first article. This is my content for my first article.
-                 </p>
-                 <p>
-                     This is my content for my first article. This is my content for my first article. This is my content for my first article. This is my content for my first article. This is my content for my first article. This is my content for my first article.
-                </p>`
+var articles = {
+            articleone: {
+            title: 'Article One | Virroy',
+            heading: 'Article One',
+            date: '19 August, 2017',
+            content: `
+                        <p>
+                                This is my content for my first article. This is my content for my first article. This is my content for my first article. This is my content for my first article. This is my content for my first article. This is my content for my first article.
+                        </p>
+                         <p>
+                                This is my content for my first article. This is my content for my first article. This is my content for my first article. This is my content for my first article. This is my content for my first article. This is my content for my first article.
+                         </p>
+                         <p>
+                             This is my content for my first article. This is my content for my first article. This is my content for my first article. This is my content for my first article. This is my content for my first article. This is my content for my first article.
+                        </p>`
+                
         
-
+        },
+            articletwo: {
+                title: 'Article Two | Virroy',
+            heading: 'Article Two',
+            date: '20 August, 2017',
+            content: `
+                        <p>
+                                This is my content for my second article. This is my content for my second article. This is my second for my second article. This is my content for my second article. This is my content for my second article. This is my content for my second article.
+                        </p>
+                        `
+            },
+            articlethree: {
+                title: 'Article Three | Virroy',
+            heading: 'Article Three',
+            date: '20 August, 2017',
+            content: `
+                        <p>
+                                This is my content for my Third article. This is my content for my Third article. This is my content for my third article. This is my content for my third article. This is my content for my third article. This is my content for my third article.
+                        </p>
+                       `
+            }
 };
-
 function createTemplate (data) {
     var title = data.title;
     var date = data.date;
